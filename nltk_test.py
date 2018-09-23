@@ -1,17 +1,23 @@
 import nltk
-from nltk.corpus import stopwords
+from nltk.corpus import words,stopwords
 
 nltk.download('punkt')
 nltk.download('names')
 nltk.download('city_database')
 nltk.download('book')
 nltk.download('stopwords')
+nltk.download('words')
 
 sentence ="""
 Marcus (Male, 48 years old, age=49 ) had a sever headache that lasted 10 days starting on 10OCT2018 NNP.
 This stopped two days later. Dr.Smith prescribed a paracetamol 10 mg dose.
 """
 stop_words=set(stopwords.words("english"))
+
+#WORD IN THE ENGLISH LANGUAGE?
+print("fine" in words.words())
+print("headache" in words.words())
+
 
 #BREAK INTO SENTENCES
 sent_tokens = nltk.sent_tokenize(sentence)
